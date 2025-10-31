@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "c5d339ef-aef6-4475-a9aa-4d90b5e34356",
+		"name": "My Social Networks API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49580729",
+		"_collection_link": "https://ghaithbenhammed-8185061.postman.co/workspace/ghaith-ben-hammed's-Workspace~e2f91b9b-ca78-40ca-8800-15ca76108450/collection/49580729-c5d339ef-aef6-4475-a9aa-4d90b5e34356?action=share&source=collection_link&creator=49580729"
+	},
+	"item": [
+		{
+			"name": "Liste des utilisateurs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Créer un utilisateur",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"GhaithBH\",\r\n  \"email\": \"ghaithBH@example.com\",\r\n  \"password\": \"1234568\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Créer un événement",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Soirée Halloween\",\r\n  \"description\": \"Événement costumé avec buffet\",\r\n  \"startDate\": \"2025-10-31T20:00:00\",\r\n  \"endDate\": \"2025-11-01T02:00:00\",\r\n  \"location\": \"Salle des fêtes de Tunis\",\r\n  \"organizers\": [\"690386e10d892671211ba112\"],\r\n  \"participants\": [\"69047600df8f35aaa3deca06\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Liste des événements",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Créer un groupe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Développeurs Web\",\r\n  \"description\": \"Un groupe pour partager du code\",\r\n  \"type\": \"public\",\r\n  \"admins\": [\"6903833a9987bc21a0d291eb\"],\r\n  \"members\": [\"69047600df8f35aaa3deca06\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/groups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Créer une discussion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Discussion générale du groupe\",\r\n  \"group\": \"69038ad0712b4056a4754424\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/discussions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"discussions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ajouter un message dans une discussion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"content\": \"Salut tout le monde 👋\",\r\n  \"author\": \"6903833a9987bc21a0d291eb\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/discussions/69038d900ebd60da5c7648ea/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"discussions",
+						"69038d900ebd60da5c7648ea",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Liste des discussions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/discussions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"discussions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Créer un album",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Souvenirs Halloween\",\r\n  \"event\": \"690386e10d892671211ba112\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/albums",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"albums"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ajouter une photo à un album",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"url\": \"https://images.unsplash.com/photo-1507525428034-b723cf961d3e\",\r\n  \"caption\": \"Soirée au bord de la mer 🌊\",\r\n  \"author\": \"6903833a9987bc21a0d291eb\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/albums/69047a2bdf8f35aaa3deca28/photos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"albums",
+						"69047a2bdf8f35aaa3deca28",
+						"photos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ajouter un commentaire sur une photo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"content\": \"Magnifique photo 😍\",\r\n  \"author\": \"69047600df8f35aaa3deca06\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/albums/photos/69047f9c3944133934e709b7/comments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"albums",
+						"photos",
+						"69047f9c3944133934e709b7",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Créer un sondage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Sondage Halloween 🎃\",\r\n  \"event\": \"690386e10d892671211ba112\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/polls",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"polls"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ajouter une question à un sondage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"text\": \"Quel déguisement préférez-vous ?\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/polls/690486605b09d17cd388b1aa/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"polls",
+						"690486605b09d17cd388b1aa",
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Liste des sondages",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"text\": \"Vampire 🧛\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/polls",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"polls"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
